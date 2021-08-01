@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        double valorfck;
+    double valorfck;
         System.out.println("escreva a estrutura desejada:");
         System.out.println("digite 1 para Baldrame");
         System.out.println("digite 2 para Pilar");
