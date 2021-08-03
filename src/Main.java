@@ -5,22 +5,19 @@ public class Main {
         double valorfck = 0;
         double ValorTotal = 0;
         double preco;
+        int a = 99;
+        Scanner leitor = new Scanner(System.in);  
         
-         
-        System.out.println("Escreva a estrutura desejada:");
-        System.out.println("digite 1 para Baldrame");
-        System.out.println("digite 2 para Pilar");
-        System.out.println("digite 3 para Calcada");
-        System.out.println("digite 0 para finalizar");       
-        Scanner leitor = new Scanner(System.in);       
-        int a = leitor.nextInt();
-        
- /*      do {    Não estou conseguindo fazer a estrutura de repetição do menu
-        escaner fica de fora*/
+ for ( int i = 0;  a != 165411/*numero aleatorio 0*/ ; i++ ) {  
+     System.out.println("Escreva a estrutura desejada:");
+     System.out.println("digite 1 para Baldrame");
+     System.out.println("digite 2 para Pilar");
+     System.out.println("digite 3 para Calcada");
+     System.out.println("digite 0 para finalizar");   
+	 a = leitor.nextInt();
         switch (a) {
             case 1: // inicio Baldrame
-                System.out.println("voce escolheu Baldrame: /n");
-               
+                System.out.println("voce escolheu Baldrame: ");             
                 //Armazenar valor do FCK escolhido
                 System.out.println("Escolha a Resistencia do Concreto: \n 1 - Fck 15 Mpa \n 2 - Fck 18 Mpa \n 3 - Fck 20 Mpa \n 4 - Fck 25 Mpa");
                 Scanner leitorfckb = new Scanner(System.in);
@@ -58,8 +55,7 @@ public class Main {
                 //Calculo e Saidas
                 System.out.println(baldrame.calculo());                
                 preco = baldrame.calculo() * valorfck;    
-                leitorfckb.close();
-                System.out.println("Valor da Estrutura R$ "  + preco);  
+                System.out.println("Valor da Estrutura R$ "  + preco + "\n");  
                 
               //Somatorio do valor das estuturas
                 ValorTotal = ValorTotal + preco;              
@@ -106,7 +102,6 @@ public class Main {
                 preco = pilar.calculo() * valorfck;         
                 System.out.println("Valor da Estrutura R$ "  + preco);                
                 break;
-
             case 3: // Calcada
                 System.out.println("voce escolheu Calcada");
                 System.out.println("Escolha a Resistencia do Concreto: \n 1 - Fck 15 Mpa \n 2 - Fck 18 Mpa \n 3 - Fck 20 Mpa \n 4 - Fck 25 Mpa");
@@ -144,18 +139,18 @@ public class Main {
                 System.out.println("Valor da Estrutura R$ "  + preco);                
                 break;
 */
-                
+            case 0: // Finalizar + Calculo do Total
+            	System.out.println("Valor Total das Estruturas:");
+            	System.out.println(ValorTotal);
+            	System.exit(0);
+            	
                 //Caso outra                
             default: System.out.println("opcao invalida");break;
             
             
         }//Fim Switch Global
-        
 
-        //caso finalizar (0)
-     //   }while (a != 0);  // fim repetição    
-        leitor.close();
-        System.out.println(ValorTotal);
-        
+ }
+        leitor.close();            
 }//Fim Main
 }
