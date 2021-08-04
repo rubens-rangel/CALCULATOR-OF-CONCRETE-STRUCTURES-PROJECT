@@ -68,7 +68,7 @@ public class Main {
                 System.out.println("voce escolheu Pilar");
                 System.out.println("Escolha a Resistencia do Concreto: \n 1 - Fck 15 Mpa \n 2 - Fck 18 Mpa \n 3 - Fck 20 Mpa \n 4 - Fck 25 Mpa");
                 Scanner leitorfckp = new Scanner(System.in);
-                int p = leitorfckp.nextInt();                
+                int p = leitorfckp.nextInt();
                 switch (p) {
                     case 1:
                         valorfck = 454.78;
@@ -84,11 +84,11 @@ public class Main {
                         break;
                     default:
                         System.out.println("opcao invalida");
-                        break;      
+                        break;
                 } //Valor de cada fck
-                
+
                 Pilar pilar = new Pilar();
-                
+
                 //Entrada dos Dados
                 Scanner scanp = new Scanner(System.in);
                 System.out.println("escreva a largura: (cm)");
@@ -98,15 +98,15 @@ public class Main {
                 System.out.println("escreva o comprimento (metros)");
                 pilar.comprimento = scanp.nextDouble();
                 System.out.println("Consumo de Concreto em m(cubicos)");
-                System.out.println(pilar.calculo());                
-                preco = pilar.calculo() * valorfck;         
-                System.out.println("Valor da Estrutura R$ "  + preco);                
+                System.out.println(pilar.calculo());
+                preco = pilar.calculo() * valorfck;
+                System.out.println("Valor da Estrutura R$ "  + preco);
                 break;
             case 3: // Calcada
                 System.out.println("voce escolheu Calcada");
                 System.out.println("Escolha a Resistencia do Concreto: \n 1 - Fck 15 Mpa \n 2 - Fck 18 Mpa \n 3 - Fck 20 Mpa \n 4 - Fck 25 Mpa");
                 Scanner leitorfckc = new Scanner(System.in);
-                int c = leitorfckc.nextInt();                
+                int c = leitorfckc.nextInt();
                 switch (c) {
                     case 1:
                         valorfck = 454.78;
@@ -122,35 +122,36 @@ public class Main {
                         break;
                     default:
                         System.out.println("opcao invalida");
-                        break;      
+                        break;
                 } //Valor de cada fck
-                
+
                 Calcada calcada = new Calcada();
-                
+
                 //Entrada dos Dados
                 Scanner scanc = new Scanner(System.in);
                 System.out.println("escreva a area: m(quadrados)");
                 calcada.area = scanc.nextDouble();
                 System.out.println("escreva a altura: (cm)");
-                calcada.altura = scanc.nextDouble();               
+                calcada.altura = scanc.nextDouble();
                 System.out.println("Consumo de Concreto em m(cubicos)");
-                System.out.println(calcada.calculo());                
-                preco = calcada.calculo() * valorfck;         
-                System.out.println("Valor da Estrutura R$ "  + preco);                
+                System.out.println(calcada.calculo());
+                preco = calcada.calculo() * valorfck;
+                System.out.println("Valor da Estrutura R$ "  + preco);
                 break;
 */
-            case 0: // Finalizar + Calculo do Total
-            	System.out.println("Valor Total das Estruturas:");
-            	System.out.println(ValorTotal);
-            	System.exit(0);
-            	
-                //Caso outra                
-            default: System.out.println("opcao invalida");break;
-            
-            
-        }//Fim Switch Global
+                case 0: // Finalizar + Calculo do Total
+                    System.out.println("Valor Total das Estruturas:");
+                    System.out.println(ValorTotal);
+                    System.exit(0);
 
- }
-        leitor.close();            
-}//Fim Main
+                    //Caso outra
+                default:
+                    System.out.println("opcao invalida");
+                    break;
+
+
+            }//Fim Switch Global
+        }//Fim estrutura de repetição
+        leitor.close();
+    }//Fim Main
 }
