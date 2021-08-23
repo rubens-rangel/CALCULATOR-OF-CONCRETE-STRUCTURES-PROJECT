@@ -8,7 +8,7 @@ public class Main {
         int a = 99;
         Scanner leitor = new Scanner(System.in);  
         
- for ( int i = 0;  a != 165411/*numero aleatorio diferente de 0,1,2,3 */ ; i++ ) {
+ for ( int i = 0;  a != -666 ; i++ ) {
      System.out.println("Escreva a estrutura desejada:");
      System.out.println("digite 1 para Baldrame");
      System.out.println("digite 2 para Pilar");
