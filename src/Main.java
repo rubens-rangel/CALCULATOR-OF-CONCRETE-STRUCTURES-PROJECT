@@ -152,7 +152,7 @@ public class Main {
 
                 case 0: // Finalizar + Calculo do Total
                     System.out.println("Valor Total das Estruturas:");
-                    System.out.println(ValorTotal);
+                    System.out.println("R$ " + ValorTotal);
                     System.exit(0);
 
                     //Caso outra
