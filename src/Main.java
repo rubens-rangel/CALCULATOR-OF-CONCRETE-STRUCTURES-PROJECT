@@ -160,7 +160,6 @@ public class Main {
                     System.out.println("opcao invalida");
                     break;
 
-
             }//Fim Switch Global
         }//Fim estrutura de repetição
         leitor.close();
